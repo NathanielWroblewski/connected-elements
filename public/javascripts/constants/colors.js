@@ -5,3 +5,4 @@
 
 export const BLACK = '#555555'
 export const WHITE = '#ffffff'
+export const LIGHT_GREY = '#eeeeee'
