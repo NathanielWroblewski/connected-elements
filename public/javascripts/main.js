@@ -8,7 +8,7 @@ import renderCircle from './views/circle.js'
 import renderPolygon from './views/polygon.js'
 import { seed, noise } from './utilities/noise.js'
 import { stableSort, remap, sample } from './utilities/index.js'
-import { BLACK, WHITE } from './constants/colors.js'
+import { BLACK, WHITE, LIGHT_GREY } from './constants/colors.js'
 import { ZOOM, FPS, Δt, CUBE_FACES, X_AXIS, Y_AXIS, Z_AXIS, FRAMES } from './constants/dimensions.js'
 
 // Copyright (c) 2020 Nathaniel Wroblewski
@@ -109,6 +109,8 @@ context.miterLimit = 0
 
 const render = () => {
   context.clearRect(0, 0, canvas.width, canvas.height)
+  context.fillStyle = LIGHT_GREY
+  context.fillRect(0, 0, canvas.width, canvas.height)
 
   if (time === degrees) time = 0
 
